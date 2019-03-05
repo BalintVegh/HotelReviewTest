@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/container_padding"
+    android:focusable="true" android:focusableInTouchMode="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/label_margin_bottom"
+        android:text="@string/review_rating_label"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_rating_error"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_rating"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        />
+
+    <RatingBar
+        android:id="@+id/rb_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/label_margin_bottom"
+        android:text="@string/review_review_label"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/input_margin_bottom"
+        android:background="@drawable/background_edittext"
+        android:gravity="start"
+        android:hint="@string/review_hint"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:padding="@dimen/input_padding"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/input_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/label_margin_bottom"
+        android:text="@string/review_date_label"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/input_margin_bottom"
+        android:background="@drawable/background_edittext"
+        android:clickable="true"
+        android:editable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="datetime"
+        android:maxLines="1"
+        android:padding="@dimen/input_padding"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/input_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/label_margin_bottom"
+        android:text="@string/review_paid_label"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/input_margin_bottom">
+
+        <EditText
+            android:id="@+id/et_paid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/spinner_container"
+            android:background="@drawable/background_edittext_left_radius"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/input_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/spinner_container"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background_edittext_right_radius">
+
+            <Spinner
+                android:id="@+id/spinner_curreny"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:padding="@dimen/input_padding"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/input_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/input_padding"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/label_margin_bottom"
+        android:text="@string/review_photo_label"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/colorBorderGray" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <vegh.balint.hotelreviewtest.utils.AutoHeightGridView
+            android:id="@+id/grid_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="12dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="12dp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBorderGray" />
+
+</LinearLayout>

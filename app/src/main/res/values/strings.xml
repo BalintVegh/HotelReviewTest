@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Hotel Review Test</string>
+    <string name="review_rating">Rating</string>
+    <string name="review_rating_label">Rating</string>
+    <string name="review_review_label">Review</string>
+    <string name="review_done">Done</string>
+    <string name="review_hint">Please share your overall experience, as well as your observations on value, catering, cleanliness and service</string>
+    <string name="review_date_label">Starting date of event</string>
+    <string name="date_hint">H 11 febr. 2019</string>
+    <string name="review_paid_label">Dailyrate paid</string>
+    <string name="review_photo_label">Upload your own photo (optional)</string>
+    <string name="error_title">Error</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="error_default">An error occurred. please try again!</string>
+    <string name="error_required">The input is required</string>
+    <string name="error_int">The input should be a number</string>
+    <string name="error_rating">The rating should be 1–5</string>
+
+    <string-array name="currencies">
+        <item>€</item>
+        <item>$</item>
+    </string-array>
+</resources>
